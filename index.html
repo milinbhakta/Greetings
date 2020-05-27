@@ -3,7 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Greeting!</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Greetings!</title>
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <ul class="navigation-list">
+        <li class="navigation-item"><a href="#">Posts</a></li>
+        <li class="navigation-item"><a href="#">Products</a></li>
+        <li class="navigation-item"><a href="#">About Us</a></li>
+      </ul>
+    </header>
+    <aside>
+      <div class="grid-container">
+        <div>
+          Color:
+          <input
+            id="color"
+            class="jscolor"
+            value="ab2567"
+            onchange="changecolor(this.value)"
+          />
+        </div>
+        <div>
+          Size:
+          <input
+            id="size"
+            value="10"
+            type="number"
+            min="1"
+            onchange="changesize(this.value)"
+          />
+        </div>
+        <div>
+          <label for="lineCAP">Choose a LineCAP:</label>
+
+          <select id="lineCAP" onchange="changelinecap(this)">
+            <option value="round" selected>round</option>
+            <option value="butt">butt</option>
+            <option value="square">square</option>
+          </select>
+        </div>
+        <div><i class="las la-paint-brush la-3x" id="brush"></i></div>
+        <div><i class="las la-eraser la-3x" id="eraser"></i></div>
+      </div>
+    </aside>
+    <main id="canvascontainer">
+      <canvas></canvas>
+    </main>
+    <footer>
+      <ul class="navigation-list">
+        <li class="navigation-item"><a href="#">Terms of Use</a></li>
+        <li class="navigation-item"><a href="#">Support</a></li>
+      </ul>
+    </footer>
+    <script src="JS/canvas.js"></script>
+    <script src="JS/jscolor.js"></script>
+  </body>
 </html>
